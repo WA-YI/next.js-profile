@@ -3,7 +3,7 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches:
-      - main  # 当主分支有推送时触发构建
+      - master  # 当主分支有推送时触发构建
 
 jobs:
   deploy:

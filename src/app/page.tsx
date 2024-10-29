@@ -2,22 +2,21 @@ import { FadeUpCard, FadeUpDiv, FadeUpStagger } from '@/components/animation';
 import { CardIcon } from '@/components/link-card-icon';
 import { CardName } from '@/components/link-card-name';
 import { LinkCard } from '@/components/link-card';
-import { DiscordPartnerIcon } from '@/components/logo';
 import { ThemeToggle } from '@/components/theme-toggle';
 import Image from 'next/image';
 import {
   FaBirthdayCake,
-  FaDiscord,
-  FaGithub,
+  FaWeixin,
+  FaBuilding,
   FaLocationArrow,
   FaSteam,
-  FaTwitter,
-  FaUserGraduate,
   FaXbox,
-  FaYoutube,
+  FaTiktok,
 } from 'react-icons/fa';
+import { SiXiaohongshu } from 'react-icons/si';
+import { AiOutlineBilibili } from "react-icons/ai";
 
-import MyAvatar from '../../public/icons/nonick.png';
+import MyAvatar from '../../public/icons/avatar.jpg';
 
 export default function Home() {
   return (
@@ -31,113 +30,82 @@ export default function Home() {
             <Image
               className='pointer-events-none w-[150px] rounded-full shadow-xl lg:w-[200px]'
               src={MyAvatar}
-              alt="nonick's avatar"
+              alt="wayi's avatar"
             />
             <section>
-              <h1 className='text-3xl font-black lg:text-4xl'>NoNICK</h1>
+              <h1 className='text-3xl font-black lg:text-4xl'>娃伊</h1>
               <h2 className='text-lg text-muted-foreground lg:text-xl'>
-                なんちゃってコンテンツクリエイター
+                恭喜你发现了这个人。
               </h2>
             </section>
             <div className='grid gap-1'>
               <div className='flex items-center gap-2 text-muted-foreground'>
                 <FaBirthdayCake />
-                <p>200X年10月17日</p>
+                <p>金牛座</p>
               </div>
               <div className='flex items-center gap-2 text-muted-foreground'>
                 <FaLocationArrow />
-                <p>日本 / Japan</p>
+                <p>北京 / 朝阳</p>
               </div>
               <div className='flex items-center gap-2 text-muted-foreground'>
-                <FaUserGraduate />
-                <p>学生</p>
+                <FaBuilding />
+                <p>互联网牛马</p>
               </div>
             </div>
           </FadeUpDiv>
+          <FadeUpCard
+            className='col-span-12 flex justify-between p-6 transition-colors hover:border-wechat md:col-span-6 lg:col-span-4'>
+            <div className='grid gap-3'>
+              <CardIcon className='bg-wechat'>
+                <FaWeixin size={25} />
+              </CardIcon>
+              <CardName name='微信' id='@wayi-kitsune' />
+            </div>
+            <div className='grid gap-3'>
+              <Image width={64} height={64} src='/icons/wechat.jpg' alt='微信二维码' />
+            </div>
+          </FadeUpCard>
           <LinkCard
-            className='col-span-12 grid gap-3 p-6 transition-colors hover:border-youtube md:col-span-6 lg:col-span-4'
-            href='https://youtube.com/nonick_mc'
+            className='col-span-6 grid gap-3 p-6 transition-colors hover:border-rednote md:col-span-3 lg:col-span-2'
+            href='https://www.xiaohongshu.com/user/profile/5ef61b38000000000101f48f'
           >
-            <CardIcon className='bg-youtube'>
-              <FaYoutube size={25} />
+            <CardIcon className='bg-rednote'>
+              <SiXiaohongshu size={25} />
             </CardIcon>
-            <CardName name='YouTube' id='@nonick_mc' />
+            <CardName name='小红书' id='@wayisama' />
           </LinkCard>
           <LinkCard
-            className='col-span-6 grid gap-3 p-6 transition-colors hover:border-twitter md:col-span-3 lg:col-span-2'
-            href='https://twitter.com/nonick_mc'
+            className='col-span-6 grid gap-3 p-6 transition-colors hover:border-douyin dark:hover:border-gray-100 md:col-span-3 lg:col-span-2'
+            href='https://www.douyin.com/user/MS4wLjABAAAAxGWzpALGKOKWiJNVqggpUX7tywAB9LYh3-jRdOMhYzg'
           >
-            <CardIcon className='bg-twitter'>
-              <FaTwitter size={25} />
+            <CardIcon className='bg-douyin dark:bg-douyinDark'>
+              <FaTiktok size={25} className="dark:text-black" />
             </CardIcon>
-            <CardName name='Twitter' id='@nonick_mc' />
-          </LinkCard>
-          <LinkCard
-            className='col-span-6 grid gap-3 p-6 transition-colors hover:border-discord md:col-span-3 lg:col-span-2'
-            href='https://discord.gg/nonick-mc'
-          >
-            <CardIcon className='bg-discord'>
-              <FaDiscord size={25} />
-            </CardIcon>
-            <CardName name='Discord' id='@nonick_mc'>
-              <DiscordPartnerIcon />
-            </CardName>
+            <CardName name='抖音' id='@wayisama' />
           </LinkCard>
           <FadeUpCard className='col-span-6 grid gap-3 p-6 transition-colors hover:border-xbox md:col-span-3 lg:col-span-2'>
             <CardIcon className='bg-xbox'>
               <FaXbox size={25} />
             </CardIcon>
-            <CardName name='Xbox' id='NULL1017' />
+            <CardName name='Xbox' id='WAYISAMA' />
           </FadeUpCard>
           <LinkCard
             className='col-span-6 grid gap-3 p-6 transition-colors hover:border-steam md:col-span-3 lg:col-span-2'
-            href='https://steamcommunity.com/id/nonick-mc/'
+            href='https://steamcommunity.com/id/wayisama/'
           >
             <CardIcon className='bg-steam'>
               <FaSteam size={25} />
             </CardIcon>
-            <CardName name='Steam' id='NULL1017' />
+            <CardName name='Steam' id='WAYI' />
           </LinkCard>
           <LinkCard
-            className='col-span-12 flex justify-between p-6 transition-colors hover:border-black dark:hover:border-gray-500 md:col-span-6 lg:col-span-4'
-            href='https://github.com/nonick-mc'
+            className='col-span-12 grid gap-3 p-6 transition-colors hover:border-bilibili md:col-span-6 lg:col-span-4'
+            href='https://space.bilibili.com/7399884'
           >
-            <div className='grid gap-3'>
-              <CardIcon className='bg-github'>
-                <FaGithub size={25} />
-              </CardIcon>
-              <CardName name='GitHub' id='@nonick-mc' />
-            </div>
-            <div className='grid grid-cols-2 gap-3'>
-              <Image width={32} height={32} src='/programLangs/JavaScript.svg' alt='javascript' />
-              <Image width={32} height={32} src='/programLangs/TypeScript.svg' alt='typescript' />
-            </div>
-          </LinkCard>
-          <LinkCard
-            className='col-span-12 grid gap-3 p-6 transition-colors hover:border-black dark:hover:border-gray-500 md:col-span-6 lg:col-span-4'
-            href='https://nonick-js.com'
-          >
-            <Image
-              width={40}
-              height={40}
-              className='rounded-2xl'
-              src='/icons/nonickjs.png'
-              alt='nonick.js icon'
-            />
-            <CardName name='NoNICK.js' id='サーバー管理に役立つ多機能DiscordBot' />
-          </LinkCard>
-          <LinkCard
-            className='col-span-12 grid gap-3 p-6 transition-colors hover:border-black dark:hover:border-gray-500 md:col-span-6 lg:col-span-4'
-            href='https://github.com/nonick-mc/nonick.stats'
-          >
-            <Image
-              width={40}
-              height={40}
-              className='rounded-2xl'
-              src='/icons/nonickstats.png'
-              alt='nonick.stats icon'
-            />
-            <CardName name='NoNICK.stats' id='The HIVEサーバーの統計を表示するDiscordBOT' />
+            <CardIcon className='bg-bilibili'>
+              <AiOutlineBilibili size={25} />
+            </CardIcon>
+            <CardName name='哔哩哔哩' id='@娃伊xs' />
           </LinkCard>
         </div>
       </FadeUpStagger>

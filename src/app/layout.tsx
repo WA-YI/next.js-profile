@@ -2,10 +2,10 @@ import { Metadata } from 'next';
 import './globals.css';
 
 import Provider from './provider';
-import { Noto_Sans_JP } from 'next/font/google';
+import { Noto_Sans_SC } from 'next/font/google';
 import { siteConfig } from '@/config/site';
 
-const notoSansJp = Noto_Sans_JP({
+const notoSansSc = Noto_Sans_SC({
   subsets: ['latin'],
 });
 
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: siteConfig.metadata.description,
     siteName: siteConfig.metadata.name,
     url: siteConfig.metadata.url,
-    locale: 'ja-JP',
+    locale: 'zh-CN',
     type: 'website',
   },
   twitter: {
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='ja'>
-      <body className={notoSansJp.className}>
+    <html lang='zh-CN'>
+      <body className={notoSansSc.className}>
         <Provider>{children}</Provider>
       </body>
     </html>
